@@ -23,6 +23,7 @@ object parFnScript {
 
   val truthier: PartialFunction[Any, String] = {
     case true => "yes"
+    case "secret text" => "bingo"
   }
 
   val fallacy: PartialFunction[Any, String] = {
@@ -39,5 +40,6 @@ object parFnScript {
   println(tester(2 + 2 == 5))
   println(tester("circle"))
   println(tester("blue, no purple"))
+  println(tester("secret text"))
 
 }
