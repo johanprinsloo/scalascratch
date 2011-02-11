@@ -2,7 +2,7 @@
 /* Copied from scala-stm - to mess with
 scala-stm - (c) 2009-2010, Stanford University, PPL */
 
-package org.scratch.stm
+package stm
 
 import scala.concurrent.stm._
 
