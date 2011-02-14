@@ -1,4 +1,4 @@
-package fnc
+package org.scratch.fnc
 
 /**
  * Partially applied functions

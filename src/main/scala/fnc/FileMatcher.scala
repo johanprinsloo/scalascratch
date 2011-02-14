@@ -1,11 +1,12 @@
-package fnc
+package org.scratch.fnc
 
-/**
- * Created by IntelliJ IDEA.
- * User: johan
- * Date: 1/30/11
- * Time: 10:33 PM
- * To change this template use File | Settings | File Templates.
- */
+object FileMatcher  {
+  private def filesHere = (new java.io.File(".")).listFiles
 
-object FileMatcher
+  private def filesMatching(matcher:  String => Boolean ) =
+      for(file <- filesHere; if matcher(file.getName))
+        yield file
+
+  def filesEnding(query: String) =
+  filesMatching( _.endsWith(query) )
+}

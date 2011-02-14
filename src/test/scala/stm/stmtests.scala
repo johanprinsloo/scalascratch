@@ -1,11 +1,19 @@
-package stm
+package org.scratch.stm
 
-/**
- * Created by IntelliJ IDEA.
- * User: johan
- * Date: 2/1/11
- * Time: 7:08 PM
- * To change this template use File | Settings | File Templates.
- */
+import org.scalatest.FlatSpec
+import org.scalatest.matchers.ShouldMatchers
 
-class stmtests
+class stmtests extends FlatSpec with ShouldMatchers {
+
+  "a Philosopher Dinner" should "end in good time" in {
+    val meals = 1000000
+    for (p <- 0 until 3) {
+      var elapsed = DiningPhilosophers.time(5, meals)
+      printf("%3.1f usec/meal\n", (elapsed * 1000.0) / meals)
+      elapsed should be > (0l)
+      elapsed should be < (10000l)
+    }
+  }
+}
+
+

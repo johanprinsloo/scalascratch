@@ -1,11 +1,28 @@
-package fnc
+package org.scratch.fnc
 
-/**
- * Created by IntelliJ IDEA.
- * User: johan
- * Date: 2/1/11
- * Time: 8:23 PM
- * To change this template use File | Settings | File Templates.
- */
+import org.scalatest.FlatSpec
+import org.scalatest.matchers.ShouldMatchers
 
-class fnctests
+
+class fnctests extends FlatSpec with ShouldMatchers {
+
+  "a Filematcher" should "list some files" in {
+    val matches = FileMatcher.filesEnding("")
+    println(matches)
+    matches.size should be > (0)
+
+    for( fileitem <- matches ){
+     println(fileitem)
+    }
+  }
+
+    "a Filematcher" should "list correct files" in {
+    val matches = FileMatcher.filesEnding(".iml")
+    println(matches)
+    matches.size should be  (1)
+
+    for( fileitem <- matches ){
+     println(fileitem)
+    }
+  }
+}
