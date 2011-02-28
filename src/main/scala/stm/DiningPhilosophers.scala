@@ -51,7 +51,7 @@ object DiningPhilosophers {
   }
 
   def main(args: Array[String]) {
-    val meals = 100000
+    val meals = 1000000
     for (p <- 0 until 3) {
       val elapsed = time(5, meals)
       printf("%3.1f usec/meal\n", (elapsed * 1000.0) / meals)
