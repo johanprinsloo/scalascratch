@@ -53,12 +53,15 @@ class Client(id: Long) extends Actor{
 object Main extends App {
 
   ActorRegistry.start
+
   val init1 = System.currentTimeMillis()
+
   (1 to 1000000).par.foreach{ i =>
     var client = new Client(i)
     client.start
     ActorRegistry ! Register( client )
   }
+
   val init2 = System.currentTimeMillis()
   println("Init time: " +(init2 - init1) + " ms")
 
