@@ -13,4 +13,15 @@ class trtests extends FlatSpec with ShouldMatchers {
     assert(true)
 
   }
+
+  "a functional transaction" should "fail gracefully" in {
+
+    Transaction.transaction {
+      println("..inside bad transaction")
+      100/0
+    }
+    assert(true)
+
+  }
+
 }
