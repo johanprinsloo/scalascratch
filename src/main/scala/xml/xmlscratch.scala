@@ -1,5 +1,8 @@
 package org.scratch.xml
 
+/**
+ * http://programming-scala.labs.oreilly.com/ch10.html
+ */
 
 import java.text.SimpleDateFormat
 import java.util.Date
@@ -67,4 +70,6 @@ class AtomFeed(posts: Seq[Post]) {
     </feed>
 
   def write = XML.saveFull(Config.atomPath, feed, "UTF-8", true, null)
+
+  def outxml : String = XML.toString
 }
