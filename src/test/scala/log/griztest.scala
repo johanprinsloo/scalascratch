@@ -20,4 +20,16 @@ class griztest extends FunSuite {
     testee.err
   }
 
+    test("Log File testing"){
+    val testee = new grizzledlogT
+
+    (1 to 60) foreach { _ =>
+        testee.one
+        testee.two
+        testee.three
+        testee.err
+    }
+
+  }
+
 }

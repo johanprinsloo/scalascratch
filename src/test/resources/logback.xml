@@ -13,10 +13,10 @@
     </filter>
     <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
       <fileNamePattern>testlog.log.%i</fileNamePattern>
-      <maxIndex>5</maxIndex>
+      <maxIndex>3</maxIndex>
     </rollingPolicy>
     <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
-      <maxFileSize>1000</maxFileSize>
+      <maxFileSize>10</maxFileSize>
     </triggeringPolicy>
 
           <layout class="ch.qos.logback.classic.PatternLayout">
