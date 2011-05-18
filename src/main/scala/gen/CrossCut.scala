@@ -1,7 +1,7 @@
 package gen
 
 import reflect.Method
-import javax.ejb.{TransactionAttribute, TransactionAttributeType}
+//import javax.ejb.{TransactionAttribute, TransactionAttributeType}
 
 /**
  * http://java.dzone.com/articles/real-world-scala-managing-cros

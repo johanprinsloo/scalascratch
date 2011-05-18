@@ -23,7 +23,7 @@ class griztest extends FunSuite {
     test("Log File testing"){
     val testee = new grizzledlogT
 
-    (1 to 60) foreach { _ =>
+    (1 to 30) foreach { _ =>
         testee.one
         testee.two
         testee.three
