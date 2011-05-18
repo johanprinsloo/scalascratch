@@ -1,11 +1,23 @@
 package aop
 
-/**
- * Created by IntelliJ IDEA.
- * User: johan
- * Date: 5/15/11
- * Time: 5:49 PM
- * To change this template use File | Settings | File Templates.
- */
+import org.scalatest.FlatSpec
+import org.scalatest.matchers.ShouldMatchers
+import gen.Transaction
 
-class aoptest
+class aoptest extends FlatSpec with ShouldMatchers {
+
+  "a functional transaction" should "be executed sequentially" in {
+    val aspect = new Aspect("execution(* *.bar(..))")
+      with InterceptorAround
+      with TransactionInterceptor
+
+    val foo = aspect.create[Foo](new FooImpl)
+
+    foo.foo("foo")
+    foo.bar("bar")
+
+    assert(true)
+
+  }
+
+}
