@@ -1,5 +1,8 @@
-package org.scratch.xml
+package xml
 
+/**
+ * http://programming-scala.labs.oreilly.com/ch10.html
+ */
 
 import java.text.SimpleDateFormat
 import java.util.Date
@@ -7,17 +10,27 @@ import scala.xml._
 
 object xmlscratch {
 
-
   val structXMLInAString = """
-<modelstructure>
-<graphics>
-<icon style="3D">icn504.svg</icon>
-<coords>
-       <x>654</x>
-       <y>6546</y>
-</coords>
-</graphics>
-</modelstructure>"""
+          <modelstructure>
+          <graphics>
+          <icon style="3D">icn504.svg</icon>
+          <coords>
+                 <x>654</x>
+                 <y>6546</y>
+          </coords>
+          </graphics>
+          </modelstructure>"""
+
+  val structXMLInxml =
+          <modelstructure>
+          <graphics>
+          <icon style="3D">icn504.svg</icon>
+          <coords>
+                 <x>654</x>
+                 <y>6546</y>
+          </coords>
+          </graphics>
+          </modelstructure>
 }
 
 object Config {
@@ -66,5 +79,7 @@ class AtomFeed(posts: Seq[Post]) {
       </entry>}
     </feed>
 
-  def write = XML.saveFull(Config.atomPath, feed, "UTF-8", true, null)
+  def write = XML.save(Config.atomPath, feed, "UTF-8", true, null)
+
+  def outxml : String = XML.toString
 }
