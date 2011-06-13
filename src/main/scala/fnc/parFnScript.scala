@@ -5,10 +5,6 @@ package org.scratch.fnc
  */
 object parFnScript {
 
-  /**
-   *  partially applied
-   */
-
   def concatUpper(s1: String, s2: String): String = (s1 + ".." + s2 ).toUpperCase
 
   val c = concatUpper _     //partially applied - no parameters speced
