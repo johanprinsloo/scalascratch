@@ -2,6 +2,9 @@ package act
 
 /**
  * http://stackoverflow.com/questions/1007371/processing-concurrently-in-scala
+ *
+ * Actor.actor is a factory method used here to create Actors :
+ *                 http://www.scala-lang.org/api/current/index.html#scala.actors.Actor$
  */
 
 import scala.actors.Actor
@@ -13,7 +16,7 @@ case class Result(result: String)
 case object Stop
 
 
-class ProducerConsumer extends App {
+object ProducerConsumer extends App {
 
   def consumer(n: Int) = actor {
     loop {

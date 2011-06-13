@@ -16,6 +16,9 @@ object DiningPhilosophers {
     val inUse = Ref(false)
   }
 
+  /**
+  *  Philosophers
+  */
   class PhilosopherThread(meals: Int, left: Fork, right: Fork) extends Thread {
     override def run() {
       for (m <- 0 until meals) {
