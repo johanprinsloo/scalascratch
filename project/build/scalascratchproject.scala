@@ -7,7 +7,7 @@ class scalascratchproject(info: ProjectInfo) extends DefaultProject(info) {
   val ScalaNLPMaven2 = "ScalaNLP Maven2" at "http://repo.scalanlp.org/repo/"
   val ondex = "ondex" at "http://ondex.rothamsted.bbsrc.ac.uk/nexus/content/groups/public/"
 
-  val scalatest = "org.scalatest" %% "scalatest" % "1.6-SNAPSHOT"
+  val scalatest = "org.scalatest" %% "scalatest" % "1.6.1"
   val scala_stm = "org.scala-tools" %% "scala-stm" % "0.3"
   val scalala = "org.scalala" %% "scalala" % "1.0.0.RC2-SNAPSHOT"
 
