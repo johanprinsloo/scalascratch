@@ -6,12 +6,12 @@ import org.scalatest.matchers.ShouldMatchers
 class stmtests extends FlatSpec with ShouldMatchers {
 
   "a Philosopher Dinner" should "end in good time" in {
-    val meals = 1000000
-    for (p <- 0 until 3) {
+    val meals = 10000000
+    for (p <- 0 until 5) {
       var elapsed = DiningPhilosophers.time(5, meals)
       printf("%3.1f usec/meal\n", (elapsed * 1000.0) / meals)
       elapsed should be > (0l)
-      elapsed should be < (10000l)
+      elapsed should be < (10000002l)
     }
   }
 }
