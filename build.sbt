@@ -6,6 +6,8 @@ scalaVersion := "2.9.1"
 
 logLevel := Level.Info
 
+parallelExecution in Test := false
+
 libraryDependencies ++= Seq(
     "org.scalatest" %% "scalatest" % "1.6.1",
     "org.scala-tools" %% "scala-stm" % "0.3",
