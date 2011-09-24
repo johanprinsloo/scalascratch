@@ -13,7 +13,7 @@ libraryDependencies ++= Seq(
     "org.scala-tools" %% "scala-stm" % "0.3",
     "org.scalala" % "scalala_2.9.0" % "1.0.0.RC2-SNAPSHOT",
     "log4j" % "log4j" % "1.2.13" % "compile->default",
-    "ch.qos.logback" % "logback-classic" % "0.9.28",
+    "ch.qos.logback" % "logback-classic" % "0.9.30",
     "org.clapper" %% "grizzled-slf4j" % "0.6.6"
 )
 

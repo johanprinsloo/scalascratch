@@ -20,7 +20,7 @@
     </triggeringPolicy>
 
           <layout class="ch.qos.logback.classic.PatternLayout">
-        <pattern>%d{yyyy-MM-dd HH:mm:ss}, %p, %c, %t, %r, %F, %L, %C{1}, %M %m%n</pattern>
+        <pattern>%d{yyyy-MM-dd HH:mm:ss}, %p, %c, %t, %r, %F, %L, %C{1}, %M %m%n%rEx</pattern>
       </layout>
           </appender>
 
@@ -29,7 +29,7 @@
       <level>info</level>
     </filter>
     <layout class="ch.qos.logback.classic.PatternLayout">
-      <pattern>%d{yyyy-MM-dd HH:mm:ss}, %p, %c, %t, %M %m%n</pattern>
+      <pattern>%d{yyyy-MM-dd HH:mm:ss}, %p, %c, %t, %M %m%n%rEx</pattern>
     </layout>
   </appender>
 
