@@ -15,7 +15,7 @@ class MyOptionMonadTest extends FlatSpec with ShouldMatchers {
 
   "a Option monad " should " produce a full option " in {
     val ret = p.computeAggregate( new MySome[Foo](new Foo()) )
-    info(" Statistically has a 50% chance of Some: " + ret)
+    info(" Statistically has a 25% chance of Some: " + ret)
     ret  should be an ('MyOption)
   }
   
