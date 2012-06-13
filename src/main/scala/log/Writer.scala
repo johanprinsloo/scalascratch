@@ -32,3 +32,25 @@ object Writer {
       withlog(log(a))
   }
 }
+
+object subcontract11 {
+  object dummyrule11{
+    val parameter11 = 23.8765
+  }
+}
+
+object subcontract12 {
+  object dummyrule12{
+    val parameter12 = 23.8765
+  }
+}
+
+
+object rule12 {
+ val dm = "234"
+}
+
+object rule11 {
+val out = subcontract11.dummyrule11.parameter11 + subcontract12.dummyrule12.parameter12
+}
+

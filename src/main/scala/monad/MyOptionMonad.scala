@@ -52,9 +52,6 @@ case class MyNone[A] extends MyOption[A] {
 }
 
 class MyOptionMonad {
-  def go = {
-
-  }
 
   def computeBaz(baz: Baz): Int =  baz.compute
 
