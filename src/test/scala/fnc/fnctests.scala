@@ -17,7 +17,7 @@ class fnctests extends FlatSpec with ShouldMatchers {
   }
 
     "a Filematcher" should "list correct files" in {
-    val matches = FileMatcher.filesEnding(".iml")
+    val matches = FileMatcher.filesEnding(".sbt")
     println( matches.toList )
     matches.size should be  (1)
 
