@@ -19,7 +19,7 @@ class PulseActor extends Actor {
   def sleep(millis: Long) =
     receiveWithin(millis) {
       case TIMEOUT =>
-        println("PulseActor pulse @"  + System.currentTimeMillis + " on thread: " + currentThread.getId() )
+        println("PulseActor pulse @"  + System.currentTimeMillis )
   }
 }
 
@@ -45,7 +45,7 @@ class ServiceActor extends Actor {
 
 
   def pulse {
-    println("ProfileActor pulse @"  + System.currentTimeMillis + " on thread: " + currentThread.getId() )
+    println("ProfileActor pulse @"  + System.currentTimeMillis )
     //cpuload = CPUprofile.getCPUload.getOrElse{ List(0.0) }  //real work
     observers foreach { observer => observer ! "CPUloadReport( cpuload )" }
     pulseactor ! Ping(this, update)

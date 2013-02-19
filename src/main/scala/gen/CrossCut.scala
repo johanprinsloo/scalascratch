@@ -1,6 +1,5 @@
 package gen
 
-import reflect.Method
 //import javax.ejb.{TransactionAttribute, TransactionAttributeType}
 
 /**

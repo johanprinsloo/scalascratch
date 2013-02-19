@@ -11,7 +11,7 @@ object Transaction {
       f
       println("end successful transaction")
     } catch {
-      case ex =>
+      case ex : Throwable =>
         println("Failed transaction with " + ex)
         // rollback?
         println("end failed transaction")
